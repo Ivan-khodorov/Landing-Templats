@@ -29,11 +29,11 @@ Vite читает только переменные с префиксом **VITE
 ## Скрипты
 
 - \
-pm run dev\ — разработка
+npm run dev\ — разработка
 - \
-pm run build\ — сборка
+npm run build\ — сборка
 - \
-pm run preview\ — предпросмотр билда
+npm run preview\ — предпросмотр билда
 
 ## Деплой (Docker, Nginx)
 
