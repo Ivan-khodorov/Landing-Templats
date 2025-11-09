@@ -1,0 +1,102 @@
+# === Node / Vite ===
+node_modules/
+dist/
+build/
+.vite/
+.vitest/
+.vite-cache/
+*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Environment / Config ===
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# === Testing / Coverage ===
+coverage/
+.playwright/
+reports/
+test-results/
+junit.xml
+lcov-report/
+
+# === Editor / System ===
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+*.swo
+*.swn
+*.sublime-project
+*.sublime-workspace
+
+# === Lint / Husky ===
+.husky/_/
+lint-staged.config.js
+.commitlintrc.js
+commitlint.config.js
+
+# === Cache ===
+.cache/
+.eslintcache
+.stylelintcache
+.prettier-cache/
+*.tmp
+*.bak
+*.orig
+
+# === Logs ===
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# === Assets / Generated ===
+*.map
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.gz
+*.tgz
+
+# === OS-specific ===
+ehthumbs.db
+Icon?
+$RECYCLE.BIN/
+
+# === Optional: editor backups ===
+*~
+*.tmp
+*.old
+*.bak
+
+# === Project-specific ===
+# Husky auto-generated hooks
+.husky/_/
+# Local screenshots or assets
+screenshots/
+tmp/
+temp/
+export/
+__snapshots__/
+
+# === VSCode / JetBrains local history ===
+.history/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/httpRequests
+.idea/modules.xml
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml

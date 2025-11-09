@@ -1,0 +1,9 @@
+// Error codes / descriptions
+export const ERRORS = {
+  NETWORK: 'NETWORK_ERROR',
+  TIMEOUT: 'TIMEOUT',
+  UNAUTHORIZED: 'UNAUTHORIZED',
+  FORBIDDEN: 'FORBIDDEN',
+  NOT_FOUND: 'NOT_FOUND',
+  VALIDATION: 'VALIDATION_ERROR'
+} as const;

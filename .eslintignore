@@ -1,0 +1,9 @@
+﻿# generated
+dist
+build
+coverage
+node_modules
+
+# configs & vendor
+vite.config.*
+playwright.config.*

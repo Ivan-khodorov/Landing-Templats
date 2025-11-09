@@ -1,0 +1,16 @@
+﻿# deps/build
+node_modules
+dist
+build
+coverage
+.playwright/
+.vitest/
+.husky/_
+
+# assets
+*.png
+*.jpg
+*.svg
+
+# generated
+*.map

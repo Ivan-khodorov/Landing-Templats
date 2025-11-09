@@ -1,0 +1,21 @@
+.theme-switcher {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+.theme-switcher button,
+[data-theme-toggle] {
+  background: transparent;
+  border: 1px solid currentcolor;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.95;
+  padding: 6px 10px;
+  transition: opacity 120ms ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
+}

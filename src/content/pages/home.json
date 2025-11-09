@@ -1,0 +1,7 @@
+{
+  "hero": { "title": "Your Product", "subtitle": "Fast. Modern. Reliable." },
+  "features": [
+    { "icon": "speed", "title": "Fast", "desc": "Blazing load times" },
+    { "icon": "shield", "title": "Secure", "desc": "Best practices out of the box" }
+  ]
+}

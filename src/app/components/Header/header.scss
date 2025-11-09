@@ -1,0 +1,241 @@
+/* ===== Header ===== */
+.header {
+  align-items: center;
+  display: flex;
+  font-family: "Playfair Display", serif;
+  justify-content: space-between;
+  letter-spacing: 4px;
+  max-height: 50px;
+  max-width: 1920px;
+  padding: 16px 24px;
+}
+
+.header__logo-wrapper {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 46px;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.4s ease;
+  width: 46px;
+}
+
+.header__logo {
+  height: 60px;
+  transition: transform 0.4s ease;
+  width: 60px;
+}
+
+.header__logo-wrapper:hover .header__logo {
+  transform: scale(1.05) translateY(-2px);
+}
+
+/* ring */
+.header__logo-ring {
+  border: 2px solid #d1b490;
+  border-radius: 50%;
+  height: 80px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  transform: scale(0.7);
+  width: 80px;
+}
+
+@keyframes ring-pulse {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.7);
+  }
+  40% {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.3);
+  }
+}
+
+.header__logo-ring.animate {
+  animation: ring-pulse 0.8s ease-out;
+}
+
+.header__logo-ring::after {
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 50%;
+  content: "";
+  height: 70px;
+  left: 5px;
+  opacity: 0;
+  position: absolute;
+  top: 5px;
+  transition: opacity 0.3s ease 0.25s;
+  width: 70px;
+}
+
+.header__logo-ring.animate::after {
+  opacity: 1;
+}
+
+.header__nav {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  font-size: 24px;
+  justify-content: center;
+  padding-left: 140px;
+  text-align: center;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header__nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.header__nav-link:hover {
+  color: #d1b490;
+}
+
+.header__actions {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+/* Telegram */
+.header__action.header__action--telegram {
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 40px;
+}
+
+.header__action-icon.header__action-icon--telegram {
+  fill: #faf8f0;
+  height: 36px;
+  opacity: 0.3;
+  padding: 3px 5px 0 0;
+  pointer-events: none;
+  transition: transform 0.7s ease, opacity 1s ease, fill 0.3s ease;
+  width: 36px;
+}
+
+.header__action.header__action--telegram:hover .header__action-icon.header__action-icon--telegram {
+  opacity: 1;
+}
+
+.header__action.header__action--telegram:hover .circle {
+  height: 40px;
+  opacity: 0.5;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.7s ease, opacity 1s ease;
+  width: 40px;
+}
+
+/* WhatsApp */
+.header__action.header__action--whatsapp {
+  cursor: pointer;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 40px;
+}
+
+.header__actions-whatsapp {
+  fill: #faf8f0;
+  height: 28px;
+  opacity: 0.3;
+  pointer-events: none;
+  transition: transform 0.7s ease, opacity 1s ease, fill 0.3s ease;
+  width: 28px;
+}
+
+.header__action.header__action--whatsapp:hover .header__actions-whatsapp {
+  opacity: 1;
+}
+
+/* ripple circle */
+.circle {
+  background: #d1b490;
+  border-radius: 50%;
+  height: 0;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.4s ease, opacity 1s ease;
+  width: 0;
+}
+
+.header__action.header__action--whatsapp:hover .circle {
+  height: 40px;
+  opacity: 0.5;
+  transform: translate(-50%, -50%) scale(1);
+  width: 40px;
+}
+
+/* theme toggle */
+.checkbox {
+  display: none;
+}
+
+label .icon-container {
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 28px;
+  height: 40px;
+  overflow: hidden;
+  padding-top: 6px;
+  position: relative;
+  width: 40px;
+}
+
+.icon {
+  color: #d1b490;
+  inset: 0;
+  line-height: 40px;
+  opacity: 0.4;
+  position: absolute;
+  text-align: center;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.icon.sun {
+  transform: translateY(0%);
+}
+
+.icon.moon {
+  color: #faf8f0;
+  transform: translateY(100%);
+}
+
+.sun:hover,
+.moon:hover {
+  opacity: 1;
+}
+
+.checkbox:checked + label .icon.sun {
+  transform: translateY(-100%);
+}
+
+.checkbox:checked + label .icon.moon {
+  transform: translateY(0%);
+}

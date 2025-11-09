@@ -1,0 +1,28 @@
+/* ===== Features ===== */
+.features {
+  align-items: flex-end;
+  display: flex;
+  height: 100px;
+  justify-content: space-around;
+}
+
+.features__item {
+  align-items: flex-end;
+  display: flex;
+  width: 40px;
+}
+
+.features__text {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 20px;
+  letter-spacing: 4px;
+  transform: rotate(-90deg);
+  transform-origin: left top;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.features__text:hover {
+  color: #d1b490;
+}

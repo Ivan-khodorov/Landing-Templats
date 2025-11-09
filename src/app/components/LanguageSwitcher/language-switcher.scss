@@ -1,0 +1,17 @@
+.lang-switcher {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+
+  span[data-lang-label] {
+    opacity: 0.9;
+  }
+
+  select[data-lang-select] {
+    appearance: none;
+    background: transparent;
+    border: 1px solid currentcolor;
+    border-radius: 6px;
+    padding: 6px 10px;
+  }
+}
